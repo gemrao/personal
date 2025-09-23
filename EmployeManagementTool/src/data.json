@@ -1,0 +1,52 @@
+ [
+    {
+      "id": "E001",
+      "name": "Aarav Kumar",
+      "email": "aarav.kumar@example.com",
+      "deptId": "ENG",
+      "role": "Software Engineer",
+      "status": "Active",
+      "managerId": "E003",
+      "avatar": "https://i.pravatar.cc/160?u=E001"
+    },
+    {
+      "id": "E002",
+      "name": "Priya Desai",
+      "email": "priya.desai@example.com",
+      "deptId": "QA",
+      "role": "SDET",
+      "status": "Active",
+      "managerId": "E004",
+      "avatar": "https://i.pravatar.cc/160?u=E002"
+    },
+    {
+      "id": "E003",
+      "name": "Meera Iyer",
+      "email": "meera.iyer@example.com",
+      "deptId": "ENG",
+      "role": "Engineering Manager",
+      "status": "Active",
+      "managerId": null,
+      "avatar": "https://i.pravatar.cc/160?u=E003"
+    },
+    {
+      "id": "E004",
+      "name": "Rohan Singh",
+      "email": "rohan.singh@example.com",
+      "deptId": "QA",
+      "role": "QA Manager",
+      "status": "Active",
+      "managerId": "E003",
+      "avatar": "https://i.pravatar.cc/160?u=E004"
+    },
+    {
+      "id": "E005",
+      "name": "Neha Gupta",
+      "email": "neha.gupta@example.com",
+      "deptId": "HR",
+      "role": "HR Generalist",
+      "status": "Active",
+      "managerId": null,
+      "avatar": "https://i.pravatar.cc/160?u=E005"
+    }
+  ]

@@ -1,0 +1,425 @@
+[
+  {
+    "questions": "Which HTML element represents the main content of a document?",
+    "type": "radio",
+    "answer": [
+      {
+        "option": "<div>",
+        "result": "false"
+      },
+      {
+        "option": "<section>",
+        "result": "false"
+      },
+      {
+        "option": "<main>",
+        "result": "true"
+      },
+      {
+        "option": "<article>",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "Which CSS layout module enables two-dimensional layouts (rows and columns)?",
+    "type": "radio",
+    "answer": [
+      {
+        "option": "Flexbox",
+        "result": "false"
+      },
+      {
+        "option": "CSS Grid",
+        "result": "true"
+      },
+      {
+        "option": "Floats",
+        "result": "false"
+      },
+      {
+        "option": "Positioning",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "Which JavaScript method converts a JSON string into an object?",
+    "type": "checkbox",
+    "answer": [
+      {
+        "option": "JSON.stringify()",
+        "result": "false"
+      },
+      {
+        "option": "JSON.parse()",
+        "result": "true"
+      },
+      {
+        "option": "Object.fromJSON()",
+        "result": "false"
+      },
+      {
+        "option": "toObject()",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "How do you declare a constant in JavaScript?",
+    "answer": [
+      {
+        "option": "let PI = 3.14",
+        "result": "false"
+      },
+      {
+        "option": "const PI = 3.14",
+        "result": "true"
+      },
+      {
+        "option": "var PI = 3.14",
+        "result": "false"
+      },
+      {
+        "option": "constant PI = 3.14",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "Which array method returns a new array with the results of calling a function on every element?",
+    "answer": [
+      {
+        "option": "forEach",
+        "result": "false"
+      },
+      {
+        "option": "map",
+        "result": "true"
+      },
+      {
+        "option": "reduce",
+        "result": "false"
+      },
+      {
+        "option": "splice",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "Which React Hook is used to perform side effects (e.g., fetching data)?",
+    "answer": [
+      {
+        "option": "useMemo",
+        "result": "false"
+      },
+      {
+        "option": "useEffect",
+        "result": "true"
+      },
+      {
+        "option": "useState",
+        "result": "false"
+      },
+      {
+        "option": "useRef",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "Which prop helps React identify which items have changed in a list?",
+    "answer": [
+      {
+        "option": "id",
+        "result": "false"
+      },
+      {
+        "option": "ref",
+        "result": "false"
+      },
+      {
+        "option": "key",
+        "result": "true"
+      },
+      {
+        "option": "index",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "Which method prevents the default action of a form submission?",
+    "answer": [
+      {
+        "option": "event.stopPropagation()",
+        "result": "false"
+      },
+      {
+        "option": "event.cancel()",
+        "result": "false"
+      },
+      {
+        "option": "event.preventDefault()",
+        "result": "true"
+      },
+      {
+        "option": "event.block()",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "Which HTTP status code represents 'Not Found'?",
+    "answer": [
+      {
+        "option": "200",
+        "result": "false"
+      },
+      {
+        "option": "301",
+        "result": "false"
+      },
+      {
+        "option": "404",
+        "result": "true"
+      },
+      {
+        "option": "500",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "Which response header controls which origins can access a resource via CORS?",
+    "answer": [
+      {
+        "option": "Content-Type",
+        "result": "false"
+      },
+      {
+        "option": "Access-Control-Allow-Origin",
+        "result": "true"
+      },
+      {
+        "option": "Cache-Control",
+        "result": "false"
+      },
+      {
+        "option": "ETag",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "Which CSS unit scales relative to the root (html) font size?",
+    "answer": [
+      {
+        "option": "em",
+        "result": "false"
+      },
+      {
+        "option": "px",
+        "result": "false"
+      },
+      {
+        "option": "rem",
+        "result": "true"
+      },
+      {
+        "option": "vh",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "Which meta tag helps with responsive layouts on mobile devices?",
+    "answer": [
+      {
+        "option": "<meta charset=\"utf-8\">",
+        "result": "false"
+      },
+      {
+        "option": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+        "result": "true"
+      },
+      {
+        "option": "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+        "result": "false"
+      },
+      {
+        "option": "<meta name=\"theme-color\" content=\"#000\">",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "Which Git command creates and switches to a new branch in one step (modern syntax)?",
+    "answer": [
+      {
+        "option": "git branch <name>",
+        "result": "false"
+      },
+      {
+        "option": "git checkout -b <name>",
+        "result": "false"
+      },
+      {
+        "option": "git switch -c <name>",
+        "result": "true"
+      },
+      {
+        "option": "git new <name>",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "Which modern dev server/bundler is known for fast HMR and is used widely in Vue/React projects?",
+    "answer": [
+      {
+        "option": "Webpack",
+        "result": "false"
+      },
+      {
+        "option": "Parcel",
+        "result": "false"
+      },
+      {
+        "option": "Vite",
+        "result": "true"
+      },
+      {
+        "option": "Rollup",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "Which HTTP method is idempotent by specification?",
+    "answer": [
+      {
+        "option": "POST",
+        "result": "false"
+      },
+      {
+        "option": "PUT",
+        "result": "true"
+      },
+      {
+        "option": "PATCH",
+        "result": "false"
+      },
+      {
+        "option": "CONNECT",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "Which HTML image attribute enables native lazy loading?",
+    "answer": [
+      {
+        "option": "decoding=\"async\"",
+        "result": "false"
+      },
+      {
+        "option": "loading=\"lazy\"",
+        "result": "true"
+      },
+      {
+        "option": "fetchpriority=\"low\"",
+        "result": "false"
+      },
+      {
+        "option": "rel=\"preload\"",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "Which CSS property controls the space between lines of text?",
+    "answer": [
+      {
+        "option": "letter-spacing",
+        "result": "false"
+      },
+      {
+        "option": "line-height",
+        "result": "true"
+      },
+      {
+        "option": "word-spacing",
+        "result": "false"
+      },
+      {
+        "option": "text-indent",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "Which Array method checks if at least one element passes a test?",
+    "answer": [
+      {
+        "option": "every",
+        "result": "false"
+      },
+      {
+        "option": "some",
+        "result": "true"
+      },
+      {
+        "option": "find",
+        "result": "false"
+      },
+      {
+        "option": "includes",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "What does the JavaScript operator === do?",
+    "answer": [
+      {
+        "option": "Loose equality with type coercion",
+        "result": "false"
+      },
+      {
+        "option": "Assignment",
+        "result": "false"
+      },
+      {
+        "option": "Strict equality without type coercion",
+        "result": "true"
+      },
+      {
+        "option": "Nullish coalescing",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "questions": "Which Promise method runs regardless of fulfillment or rejection?",
+    "answer": [
+      {
+        "option": "then",
+        "result": "false"
+      },
+      {
+        "option": "catch",
+        "result": "false"
+      },
+      {
+        "option": "finally",
+        "result": "true"
+      },
+      {
+        "option": "all",
+        "result": "false"
+      }
+    ]
+  }
+]

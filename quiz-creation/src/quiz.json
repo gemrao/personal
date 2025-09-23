@@ -1,0 +1,71 @@
+[
+  {
+    "id": "1",
+    "questions": "Which HTML element represents the main content of a document?",
+    "type": "radio",
+    "answer": [
+      {
+        "option": "<div>",
+        "result": "false"
+      },
+      {
+        "option": "<section>",
+        "result": "false"
+      },
+      {
+        "option": "<main>",
+        "result": "true"
+      },
+      {
+        "option": "<article>",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "questions": "Which CSS layout module enables two-dimensional layouts (rows and columns)?",
+    "type": "radio",
+    "answer": [
+      {
+        "option": "Flexbox",
+        "result": "false"
+      },
+      {
+        "option": "CSS Grid",
+        "result": "true"
+      },
+      {
+        "option": "Floats",
+        "result": "false"
+      },
+      {
+        "option": "Positioning",
+        "result": "false"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "questions": "Which JavaScript method converts a JSON string into an object?",
+    "type": "checkbox",
+    "answer": [
+      {
+        "option": "JSON.stringify()",
+        "result": "false"
+      },
+      {
+        "option": "JSON.parse()",
+        "result": "true"
+      },
+      {
+        "option": "Object.fromJSON()",
+        "result": "true"
+      },
+      {
+        "option": "toObject()",
+        "result": "false"
+      }
+    ]
+  }
+]
