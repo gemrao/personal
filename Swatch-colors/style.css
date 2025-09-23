@@ -1,0 +1,53 @@
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: full;
+    justify-content: center;
+}
+
+.preview {
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    border: 1px black solid;
+    margin: 16px 0;
+}
+
+.swatches {
+    display: flex;
+    gap: 10px;
+}
+
+.swatches__color {
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    border: 1px black solid;
+    cursor: pointer;
+}
+
+.selected {
+    border: 3px solid black;
+    transform: scale(1.1);
+}
+
+.swatches__color--red {
+    background-color: red;
+}
+
+.swatches__color--blue {
+    background-color: blue;
+}
+
+.swatches__color--yellow {
+    background-color: yellow;
+}
+
+.swatches__color--green {
+    background-color: green;
+}
