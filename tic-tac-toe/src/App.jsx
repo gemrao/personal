@@ -6,7 +6,6 @@ import TicTacToe from './TicTacToe'
 
 
 function App() {
-  const [grid, setGrid] = useState(new Array(3 * 3).fill(''))
   const [player, setPlayer] = useState('X')
 
   const onClickGrid = (i) => {

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Swatch colors</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script src="./index.js" type="module"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <div class="container">
+        <h1>Countdown timer</h1>
+        <div class="timer">
+            <label>
+                <input class="hour" id="hour" type="number" placeholder="00" maxlength="2"
+                    oninput="this.value=this.value.slice(0,this.maxLength)"> :</input>
+            </label>
+            <label>
+                <input class="min" id="min" type="number" placeholder="00" maxlength="2"
+                    oninput="this.value=this.value.slice(0,this.maxLength)"> :</input>
+            </label>
+            <label>
+                <input class="secs" id="secs" type="number" placeholder="00" maxlength="2"
+                    oninput="this.value=this.value.slice(0,this.maxLength)"></input>
+            </label>
+        </div>
+        <div class="buttons">
+            <button class="reset">Reset</button>
+            <button class="start">Start</button>
+            <button class="stop">Stop</button>
+        </div>
+    </div>
+</body>
+
+</html>
