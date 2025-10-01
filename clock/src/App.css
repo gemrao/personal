@@ -71,9 +71,11 @@
   width: 5px;
   display: flex;
 }
-.hour{
+
+.hour {
   height: 50%;
 }
+
 .hand::before {
   background: black;
   width: 2px;
@@ -82,10 +84,41 @@
   height: 50%;
 }
 
-.hand.seconds::before{
+.hand.seconds::before {
   width: 0.8px;
 }
 
-.hour::before{
+.hour::before {
   width: 3px;
+}
+
+
+.hour-needle::after {
+  content: '';
+  width: 4px;
+  display: block;
+  background: grey;
+  height: 50%;
+  border-radius: 2px;
+
+}
+
+.min-needle::before {
+  content: '';
+  width: 2px;
+  display: block;
+  background: grey;
+  height: 50%;
+  border-radius: 2px;
+
+}
+
+.secs-needle::before {
+  content: '';
+  width: 0.8px;
+  display: block;
+  background: grey;
+  height: 50%;
+  border-radius: 2px;
+
 }
