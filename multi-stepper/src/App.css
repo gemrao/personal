@@ -1,0 +1,107 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px
+}
+
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  position: relative;
+}
+
+.step {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px black solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  background-color: #888;
+}
+
+.selected {
+  background-color: blue;
+  color: white;
+}
+
+.completed {
+  background-color: green;
+  color: white;
+}
+
+button {
+  width: 80px;
+  height: 40px;
+
+}
+
+.progress {
+  height: 4px;
+  background-color: rgb(200, 198, 198);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+}
+
+.progress-complete {
+  height: 4px;
+  background-color: greenyellow;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transition: width 0.3s ease;
+}
