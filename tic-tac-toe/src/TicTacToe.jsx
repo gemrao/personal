@@ -6,59 +6,105 @@ function TicTacToe({ size }) {
   const [grid, setGrid] = useState(new Array(size).fill(new Array(size).fill('')))
   const [player, setPlayer] = useState('X')
   const [winner, setWinner] = useState(null)
-  const onClickGrid = (row, cell) => {
-    console.log('sd')
-    if (winner) return
-    // checkWinnigs(row, cell)
-    const newGrid = grid.map((gg, idx) => idx !== row ? gg : gg.map((ggg, cell_idx) => cell_idx !== cell ? ggg : player))
-    const val = newGrid[row][cell]
-    //check Row
-    let checkRow = true
-    for (let i = 0; i < newGrid[row].length; i++) {
-      if (newGrid[row][i] !== val) {
-        checkRow = false; break;
+  // const onClickGrid = (row, cell) => {
+  //   console.log('sd')
+  //   if (winner) return
+  //   // checkWinnigs(row, cell)
+  //   const newGrid = grid.map((gg, idx) => idx !== row ? gg : gg.map((ggg, cell_idx) => cell_idx !== cell ? ggg : player))
+  //   const val = newGrid[row][cell]
+  //   //check Row
+  //   let checkRow = true
+  //   for (let i = 0; i < newGrid[row].length; i++) {
+  //     if (newGrid[row][i] !== val) {
+  //       checkRow = false; break;
+  //     }
+  //   }
+
+  //   // check col
+  //   let checkCol = true
+  //   for (let i = 0; i < newGrid[row].length; i++) {
+  //     if (newGrid[i][cell] !== val) {
+  //       checkCol = false; break
+  //     }
+  //   }
+
+  //   //check diagnol
+  //   let checkdiagnol
+  //   if (cell === row) {
+  //     checkdiagnol = true
+  //     for (let i = 0; i < newGrid[row].length; i++) {
+  //       if (newGrid[i][i] !== val) {
+  //         checkdiagnol = false; break
+  //       }
+  //     }
+  //   }
+
+  //   //check anidiagnol
+  //   let checkAntidiagnol
+  //   if (row + cell === newGrid.length - 1) {
+  //     checkAntidiagnol = true
+  //     for (let i = 0; i < newGrid.length; i++) {
+  //       if (newGrid[i][newGrid.length - 1 - i] !== val) {
+  //         checkAntidiagnol = false; break
+  //       }
+  //     }
+  //   }
+
+  //   setGrid(newGrid)
+  //   if (checkRow || checkCol || checkdiagnol || checkAntidiagnol) {
+  //     setWinner(val)
+  //   }
+  //   else
+  //     setPlayer(p => p === 'X' ? 'O' : 'X')
+
+  // }
+  const onClickGrid = (row, col) => {
+
+    const newgrid = grid.map((p, i) => row !== i ? p : p.map((pp, i) => col !== i ? pp : player))
+    const newValue = newgrid[row][col]
+    setGrid(newgrid)
+
+    //check rows
+    let rows = true
+    for (let i = 0; i < size - 1; i++) {
+      if (newgrid[row][i] !== newgrid[row][i + 1]) {
+        rows = false
+        break
       }
     }
 
-    // check col
-    let checkCol = true
-    for (let i = 0; i < newGrid[row].length; i++) {
-      if (newGrid[i][cell] !== val) {
-        checkCol = false; break
+    //check cols
+    let cols = true
+    for (let i = 0; i < size; i++) {
+      if (newgrid[i][col] !== newValue) {
+        cols = false
+        break
       }
     }
+
 
     //check diagnol
-    let checkdiagnol
-    if (cell === row) {
-      checkdiagnol = true
-      for (let i = 0; i < newGrid[row].length; i++) {
-        if (newGrid[i][i] !== val) {
-          checkdiagnol = false; break
+    //[00,11,33,44]
+    let diagnol = true
+    if (row === col) {
+      for (let i = 0; i < size; i++) {
+        if (newgrid[i][i] !== newValue) {
+          diagnol = false
+          break
         }
       }
     }
-
-    //check anidiagnol
-    let checkAntidiagnol
-    if (row + cell === newGrid.length - 1) {
-      checkAntidiagnol = true
-      for (let i = 0; i < newGrid.length; i++) {
-        if (newGrid[i][newGrid.length - 1 - i] !== val) {
-          checkAntidiagnol = false; break
-        }
-      }
+    else {
+      diagnol = false
     }
 
-    setGrid(newGrid)
-    if (checkRow || checkCol || checkdiagnol || checkAntidiagnol) {
-      setWinner(val)
+    if (rows || cols || diagnol) {
+      setWinner(true)
     }
     else
       setPlayer(p => p === 'X' ? 'O' : 'X')
 
   }
-
   const onReset = () => {
     setGrid(new Array(size).fill(new Array(size).fill('')))
     setWinner(null)
