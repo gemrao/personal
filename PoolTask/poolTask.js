@@ -53,3 +53,93 @@ const tasks = [
     const results = await promisePool(tasks, 2);
     console.log("Results:", results);
 })();
+
+
+function debounce(func, duration) {
+    let id;
+    return function (...args) {
+        clearTimeout(id)
+        id = setTimeout(() => {
+            func.call(this, args)
+        }, duration)
+    }
+}
+
+function throttle(func, duration) {
+    let trottle = false
+    return function (...args) {
+        if (trottle) return
+        trottle = true
+        setTimeout(() => {
+            trottle = false
+        }, duration)
+        func.call(this, args)
+    }
+}
+
+function myPromiseAllSettled(iteratable) {
+    let result = new Array(iteratable.length)
+    let count = iteratable.length()
+
+    return new Promise((resolve, reject) => {
+        iteratable.forEach((item, i) => {
+            Promise.resolve(item).then(val => {
+                result[i] = { status: 'fullfilled', value: val }
+            }, (reason) => {
+                result[i] = { status: 'rejected', reason }
+            }).finally(() => {
+                completed++;
+                if (count === iteratable.length) {
+                    resolve(result);
+                }
+            })
+
+        })
+
+
+    })
+
+}
+
+
+function myMap(func, thisArg) {
+    const res = []
+    const arr = this
+    for (let i = 0; i < arr.length; i++) {
+        if (!(i in arr)) continue
+        res[i] = func.call(thisArg, arr[i], i, arr)
+    }
+    return res
+}
+
+function filter(func, thisArg) {
+    const res = []
+    const arr = this
+    for (let i = 0; i < arr.length; i++) {
+        if (!(i in arr)) continue
+        if (func.call(thisArg, arr[i], i, arr)) {
+            res.push(arr[i])
+        }
+
+    }
+    return res
+}
+
+function myReduce(func, initialVal) {
+
+    const arr = this
+    if (arr.length < 1) {
+        throw new TypeError('d')
+    }
+    const hasInitial = false
+    if (arguments > 1) {
+        hasInitial = true
+    }
+    let res = initialVal ? initialVal : arr[0]
+    let idx = initialVal ? 0 : 1
+
+    for (let i = idx; i < arr.length; i++) {
+        res = func(res, arr[i], i, arr)
+    }
+    return res
+}

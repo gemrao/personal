@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Toasts, useToast } from './Toasts'
+import { createContext } from 'react'
 
 function Content() {
   const { addToast } = useToast()
@@ -17,12 +18,17 @@ function Content() {
 
   return <button onClick={() => createToast('Error')}>Add</button>
 }
-
+export const AppContext = createContext()
 function App() {
+
+  const [val] = useState('new')
+
   return (
-    <Toasts>
-      <Content />
-    </Toasts>
+    <AppContext.Provider value={val}>
+      <Toasts>
+        <Content />
+      </Toasts>
+    </AppContext.Provider>
   )
 }
 
